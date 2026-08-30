@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: auth-service
+              uri: ${AUTH_SERVICE_URL:http://localhost:8081}
+              predicates:
+                - Path=/auth/**,/user/**
+
+            - id: facturacion-service
+              uri: ${FACTURACION_SERVICE_URL:http://localhost:8082}
+              predicates:
+                - Path=/facturas/**
+
+server:
+  port: 8080
