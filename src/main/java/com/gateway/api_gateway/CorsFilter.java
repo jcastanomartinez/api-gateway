@@ -14,7 +14,8 @@ public class CorsFilter implements Filter {
     // Añade aquí cualquier origen desde el que sirvas el frontend
     private static final List<String> ALLOWED_ORIGINS = List.of(
             "http://localhost:4200",
-            "http://192.168.49.2:30471"
+            "http://192.168.49.2:30471",
+            "http://127.0.0.1:30471"
     );
 
     @Override
