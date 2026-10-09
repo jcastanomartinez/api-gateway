@@ -8,7 +8,7 @@ spring:
         webmvc:
           routes:
             - id: auth-service
-              uri: ${AUTH_SERVICE_URL:http://localhost:8080}
+              uri: ${AUTH_SERVICE_URL:http://localhost:8081}
               predicates:
                 - Path=/auth/**,/user/**
 
@@ -18,4 +18,4 @@ spring:
                 - Path=/facturas/**
 
 server:
-  port: 8081
+  port: 8080
